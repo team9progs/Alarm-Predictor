@@ -24,9 +24,11 @@ for date in pd.date_range(start_date, end_date):
             continue
         soup = bs(response.content, 'html.parser')
         description = soup.find("div", {"class": "field-name-body"}).text
+        description = description.replace(" dot ", ".")
+        description = re.sub(r'\[1\].*?\[1\]', '', description)
+        description = re.sub(r'\[.*?\]', '', description)
         description = re.sub(r'http\S+', '', description)
         description = description.lower()
-        description = description.replace(" dot ", ".")
         description = description.replace("\n", " ")
         description = description.replace("\xa0", " ")
         pattern = re.compile('[^A-Za-z0-9\s]')
