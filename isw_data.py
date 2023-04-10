@@ -33,7 +33,7 @@ for date in pd.date_range(start_date, end_date):
         description = description.replace("\xa0", " ")
         pattern = re.compile('[^A-Za-z0-9\s]')
         description = pattern.sub("", description)
-        description = description.split(".")[0]
+        description = re.sub(r'^.*?(est|et)', '', description, flags=re.DOTALL)
         data.append({"Date": date.strftime("%B-%d-%Y").lower(), "Description": description})
     except (requests.exceptions.RequestException, KeyError, TypeError) as error:
         print(f"{error} for {date}")
