@@ -45,6 +45,7 @@ for i in range(len(processed_texts)):
 
 # Create a DataFrame from the list of dictionaries
 df_vectorized = pd.DataFrame(observations)
+df_vectorized['day_datetime'] = df['Date']
 
 # Add the original text and processed text columns to the vectorized DataFrame
 df_vectorized["text"] = texts
