@@ -14,3 +14,4 @@ Based on the data that was provided by our Lecturer: air alarms history and weat
 4. final_pred.py - code to create dataset which is used to train model
 5. raw-data - all data files which is used for predict in .csv format
 6. server - folder which contains all files for server working
+7. models - folder which contains all models that our team have created during the course
