@@ -7,6 +7,8 @@ Based on the data that was provided by our Lecturer: air alarms history and weat
 
 **Server endpoint** - http://54.172.227.220:8000
 
-## Getting started 
-1. First you will need to install all modules from requirements.txt
-2. 
+## Explaining project files 
+1. isw_data.py - code for scaping and preprocessing data from isw reports
+2. vectorized_isw.py - code for vectorizing isw data
+3. gpaphs.py - code for visualisation of weather reports and analyzing other reports
+4. final_pred.py - code to create dataset which is used to train model
