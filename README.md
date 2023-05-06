@@ -7,6 +7,6 @@ Based on the data that was provided by our Lecturer: air alarms history and weat
 
 **Server endpoint** - http://54.172.227.220:8000
 
-##Getting started 
+## Getting started 
 1. First you will need to install all modules from requirements.txt
 2. 
